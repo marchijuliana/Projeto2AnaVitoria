@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:overScrollMode="ifContentScrolls">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_cadastro"
+            android:textSize="18sp" />
+
+        <!--  User  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_user"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/edt_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_user"/>
+
+        <!--  Email  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_email" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"/>
+
+        <!--  Pass  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_pass"/>
+
+        <EditText
+            android:id="@+id/edt_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_pass"/>
+
+        <!--  Confirm Pass  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_confirm_pass"/>
+
+        <EditText
+            android:id="@+id/edt_confirm_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_confirm_pass"/>
+
+        <!--  Sexo  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_sex"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/rb_group_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb_fem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_rb_fem"/>
+            <RadioButton
+                android:id="@+id/rb_masc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_rb_masc"/>
+            <RadioButton
+                android:id="@+id/rb_undefined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_rb_undefined"
+                android:checked="true"/>
+        </RadioGroup>
+
+        <!--  Fav  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_fav"
+            android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spnn_fav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/fav_options"
+            />
+
+        <!--  Goods  -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_goodies"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnSpan="3"/>
+            <CheckBox
+                android:id="@+id/cb_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_cb_album"
+                android:layout_row="1"
+                android:layout_column="0"/>
+            <CheckBox
+                android:id="@+id/cb_dvd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cb_dvd"
+                android:layout_row="1"
+                android:layout_column="1"/>
+            <CheckBox
+                android:id="@+id/cb_poster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cb_poster"
+                android:layout_row="1"
+                android:layout_column="2"/>
+            <CheckBox
+                android:id="@+id/cb_camiseta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cb_camiseta"
+                android:layout_row="2"
+                android:layout_column="0"/>
+            <CheckBox
+                android:id="@+id/cb_moletom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_rb_moletom"
+                android:layout_row="2"
+                android:layout_column="1"/>
+            <CheckBox
+                android:id="@+id/cb_colar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cb_colar"
+                android:layout_row="2"
+                android:layout_column="2"/>
+            <CheckBox
+                android:id="@+id/cb_pulseira"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cb_pulseira"
+                android:layout_row="3"
+                android:layout_column="0"/>
+            <CheckBox
+                android:id="@+id/cb_agenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cb_agenda"
+                android:layout_row="3"
+                android:layout_column="1"/>
+            <CheckBox
+                android:id="@+id/cb_outros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cb_outros"
+                android:layout_row="3"
+                android:layout_column="2"/>
+        </GridLayout>
+
+        <!--  Submit  -->
+        <Button
+            android:id="@+id/btn_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2296F1"
+            android:onClick="onClickCadastrarUsuario"
+            android:text="@string/text_btn_cadastro"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+</ScrollView>
