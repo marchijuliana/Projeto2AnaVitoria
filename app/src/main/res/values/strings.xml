@@ -23,9 +23,7 @@
     <string name="quiz">Quiz</string>
     <string name="txt_legal">Legal!</string>
     <string name="anavitoria_banner">AnaVitoria Banner</string>
-    <string name="txt_desc_quiz">    Será que sua personalidade é mais parecida com a da Ana? Ou será que é com a da Vitória?
-        \n
-        \nClique em começar, responda algumas perguntas e descubra!</string>
+    <string name="txt_desc_quiz">"    Será que sua personalidade é mais parecida com a da Ana? Ou será que é com a da Vitória?                    Clique em começar, responda algumas perguntas e descubra!"</string>
     <string name="botao_continuar">Botão continuar</string>
 
     <string name="txt_descritivo_ana">Uma pessoa meiga e carinhosa, conhecida por estar sempre se preocupando com o próximo e as vezes, sofre muito com isso. Mas não se deixe abalar! Afinal, mesmos que coisas ruins aconteçam, tem sempre uma Vitória com uma coxinha de jaca para te levantar (mas tome cuidado com a piscina).</string>
@@ -34,7 +32,7 @@
     <string name="anavit_fc">Anavitória FanClube</string>
     <string name="siga_redes_sociais">Siga as meninas nas redes sociais!</string>
 
-    <string name="letra_outroria">\"Quando vi, já veio sim \nTomou parte de mim \nLevou embora o meu pesar\"</string>
+    <string name="letra_outroria">\"Quando vi, já veio sim  Tomou parte de mim  Levou embora o meu pesar\"</string>
     <string name="title_activity_login">LoginActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -83,12 +81,7 @@
     <string name="txt_descript_genero">Gênero:</string>
     <string name="txt_descript_fav">Cantora favorita:</string>
     <string name="txt_descript_goodies">Goodies:</string>
-    <string name="txt_music">\"Quando vi, já veio sim
-                            Tomou parte de mim\n
-                            Levou embora o meu pesar\n
-                            Teu ver me encanta, emfim\n
-                            Canta perto de mim\n
-                            Tua voz amansa o teu olhar\"</string>
+    <string name="txt_music">\"Quando vi, já veio sim                             Tomou parte de mim                              Levou embora o meu pesar                              Teu ver me encanta, emfim                              Canta perto de mim                              Tua voz amansa o teu olhar\"</string>
     <string name="text_credit">- Outrória (Anavitória, OutroEu)</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="txt_user">Usuário:</string>
