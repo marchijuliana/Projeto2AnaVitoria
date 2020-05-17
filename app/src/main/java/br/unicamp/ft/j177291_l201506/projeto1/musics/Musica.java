@@ -14,7 +14,7 @@ public class Musica {
     private int foto;
     private int ano;
 
-    public Musica(String nomeMusica) {
+    public Musica(String nomeMusica, String nomeAlbum, String duracao, int foto, int ano) {
 
         this.nomeMusica = nomeMusica;
         this.nomeAlbum = nomeAlbum;
@@ -35,14 +35,15 @@ public class Musica {
 
     public static ArrayList<Musica> getMusicas(Context context) {
         if (context != null) {
-            String[] infos = context.getResources().getStringArray(R.array.item_musica_nome);
+            String[] nomes = context.getResources().getStringArray(R.array.item_musica_nome);
+            String[] albuns = context.getResources().getStringArray(R.array.item_musica_album);
+            String[] duracoes = context.getResources().getStringArray(R.array.item_musica_duracao);
+            int[] anos = context.getResources().getIntArray(R.array.item_musica_ano);
             TypedArray fotos = context.getResources().obtainTypedArray(R.array.item_musica_foto);
 
             ArrayList<Musica> musicas = new ArrayList<>();
-            for(int i = 0 ; i < infos.length ; i++){
-                String[] info = infos[i].split(",");
-                //musicas.add(new Musica(info[0], Integer.parseInt(info[1]), fotos.getResourceId(i,0), Integer.parseInt(info[2])));
-                musicas.add(new Musica("Outroria"));
+            for(int i = 0 ; i < anos.length ; i++){
+                musicas.add(new Musica(nomes[i], albuns[i], duracoes[i], fotos.getResourceId(i,0), anos[i]));
             }
             fotos.recycle();
             return musicas;

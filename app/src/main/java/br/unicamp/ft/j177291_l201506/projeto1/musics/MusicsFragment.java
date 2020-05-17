@@ -32,18 +32,18 @@ public class MusicsFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(listaMusicaAdapter);
 
-        ListaMusicaAdapter.ListaMusicaAdapterOnClickListener onClickListener = new ListaMusicaAdapter.ListaMusicaAdapterOnClickListener(){
-            @Override
-            public void listaMusicaOnItemClick(String text) {
-                Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void listaMusicaOnItemLongClick(String text) {
-                Toast.makeText(getContext(), text, Toast.LENGTH_LONG).show();
-            }
-        };
-        listaMusicaAdapter.setListaMusicaAdapterOnClickListener(onClickListener);
+//        ListaMusicaAdapter.ListaMusicaAdapterOnClickListener onClickListener = new ListaMusicaAdapter.ListaMusicaAdapterOnClickListener(){
+//            @Override
+//            public void listaMusicaOnItemClick(String text) {
+//                Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void listaMusicaOnItemLongClick(String text) {
+//                Toast.makeText(getContext(), text, Toast.LENGTH_LONG).show();
+//            }
+//        };
+//        listaMusicaAdapter.setListaMusicaAdapterOnClickListener(onClickListener);
 
         return view;
     }

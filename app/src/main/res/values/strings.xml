@@ -99,23 +99,33 @@
         <item>Ambas</item>
     </string-array>
 
-    <string-array name="item_musica_ano">
+    <integer-array name="item_musica_ano">
         <item>2017</item>
-    </string-array>
+        <item>2017</item>
+        <item>2017</item>
+    </integer-array>
 
     <string-array name="item_musica_album">
-        <item>N</item>
+        <item>O tempo é agora</item>
+        <item>O tempo é agora</item>
+        <item>O tempo é agora</item>
     </string-array>
 
     <string-array name="item_musica_duracao">
+        <item>2:00</item>
+        <item>2:00</item>
         <item>2:00</item>
     </string-array>
 
     <string-array name="item_musica_nome">
         <item>Outroria</item>
+        <item>Outroria</item>
+        <item>Outroria</item>
     </string-array>
 
     <array name="item_musica_foto">
+        <item>@drawable/ana</item>
+        <item>@drawable/ana</item>
         <item>@drawable/ana</item>
     </array>
 
