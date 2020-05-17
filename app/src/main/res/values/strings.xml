@@ -83,7 +83,7 @@
     <string name="txt_descript_goodies">Goodies:</string>
     <string name="txt_music">\"Quando vi, já veio sim                             Tomou parte de mim                              Levou embora o meu pesar                              Teu ver me encanta, emfim                              Canta perto de mim                              Tua voz amansa o teu olhar\"</string>
     <string name="text_credit">- Outrória (Anavitória, OutroEu)</string>
-    <string name="cadastrar">Cadastrar</string>
+    <string name="cadastrar">Ainda não é registrado? Cadastre-se!</string>
     <string name="txt_user">Usuário:</string>
 
     <string-array name="fav_options">
