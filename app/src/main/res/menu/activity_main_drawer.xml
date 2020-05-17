@@ -7,14 +7,18 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/icon_home"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_home"
+            android:iconTint="@color/AmareloBege"
+            />
         <item
             android:id="@+id/musicsFragment"
             android:icon="@drawable/icon_music"
-            android:title="@string/menu_musics" />
+            android:title="@string/menu_musics"
+            android:iconTint="@color/AmareloBege"/>
         <item
             android:id="@+id/quizFragment"
             android:icon="@drawable/icon_quiz"
-            android:title="@string/menu_quiz" />
+            android:title="@string/menu_quiz"
+            android:iconTint="@color/AmareloBege"/>
     </group>
 </menu>
