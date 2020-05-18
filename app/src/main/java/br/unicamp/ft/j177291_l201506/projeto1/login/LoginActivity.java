@@ -47,12 +47,15 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void validate(String userName, String userPassword){
-        if((userName.equals("admin")) && (userPassword.equals("admin"))){
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(intent);
-        }else{
-            Toast.makeText(this, "Email ou usuário incorretos!", Toast.LENGTH_LONG).show();
-        }
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        intent.putExtra("user", userName);
+        startActivity(intent);
+
+//        if((userName.equals("admin")) && (userPassword.equals("admin"))){
+//
+//        }else{
+//            Toast.makeText(this, "Email ou usuário incorretos!", Toast.LENGTH_LONG).show();
+//        }
     }
 
 }

@@ -8,6 +8,7 @@
     <color name="AmareloClaro">#d8a271</color>
     <color name="AmareloBege">#e19c59</color>
     <color name="AmareloMaisClaro">#D8B899</color>
+    <color name="AmareloMaisClaroAinda">#DFCDBB</color>
     <color name="Marrom">#b07a58</color>
     <color name="AzulEscuroMaisClaro">#B42D3450</color>
 </resources>

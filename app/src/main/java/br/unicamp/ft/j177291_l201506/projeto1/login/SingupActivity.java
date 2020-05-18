@@ -65,11 +65,9 @@ public class SingupActivity extends AppCompatActivity {
 
                 String goodies = verificarGoodies();
                 String genero = verificarGenero();
-//                Encapsulador capsula = new Encapsulador(edt_user.getText().toString(), edt_email.getText().toString(),
-//                        edt_pass.getText().toString(), genero, spnn_fav.getSelectedItem().toString(), goodies);
 
                 Intent intent = new Intent(this, MainActivity.class);
-//                intent.putExtra("capsula", capsula);
+                intent.putExtra("user", edt_user.getText().toString());
                 startActivity(intent);
             }
             else{

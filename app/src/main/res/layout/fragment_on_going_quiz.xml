@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".quiz.OnGoingQuiz"
+    android:background="@color/AmareloMaisClaroAinda"
     android:orientation="vertical">
 
     <ImageView
@@ -35,6 +36,7 @@
         android:text="Pergunta que será obtida a partir de um banco de dados. Oki doki?"
         android:textSize="24sp"
         android:layout_marginHorizontal="10dp"
+        android:textColor="@color/AzulEscuro"
         android:layout_marginTop="15dp"/>
 
     <RadioGroup
@@ -43,6 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_pergunta"
         android:layout_marginHorizontal="15dp"
+        android:buttonTint="@color/AmareloBege"
+        android:textColor="@color/AzulEscuro"
         android:layout_marginTop="27dp">
 
         <RadioButton
@@ -50,8 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:textColor="@color/AzulEscuroMaisClaro"
             android:text="Opção 1"
-            android:textColor="#353535"
             android:textSize="18sp" />
 
         <RadioButton
@@ -59,14 +63,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Opção 2"
-            android:textColor="#353535"
+            android:textColor="@color/AzulEscuroMaisClaro"
             android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/rb_opc3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#353535"
+            android:textColor="@color/AzulEscuroMaisClaro"
             android:text="Opção 3"
             android:textSize="18sp" />
 
@@ -74,8 +78,8 @@
             android:id="@+id/rb_opc4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#353535"
-            android:text="Opção 4"
+            android:textColor="@color/AzulEscuroMaisClaro"
+             android:text="Opção 4"
             android:textSize="18sp" />
     </RadioGroup>
 
