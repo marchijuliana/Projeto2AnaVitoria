@@ -7,8 +7,10 @@
     android:layout_height="fill_parent"
     tools:context="login.LoginActivity"
     android:paddingTop="20dp"
+    android:theme="@style/AppTheme.NoActionBar"
     android:orientation="vertical"
-    android:background="@color/AzulEscuro">
+    android:background="@color/AzulEscuro"
+    >
 
 
     <ImageView

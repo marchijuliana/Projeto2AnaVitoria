@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:background="@color/AmareloMaisClaro">
+    android:background="@color/AmareloMaisClaroAinda">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         card_view:cardBackgroundColor="@color/AzulMaisEscuro"
         card_view:cardCornerRadius="12dp"
         card_view:cardElevation="3dp"
-        card_view:contentPadding="10dp"
+        card_view:contentPadding="5dp"
         android:clickable="true">
 
 
@@ -25,17 +25,17 @@
         android:orientation="vertical">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image_view"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:padding="5dp" />
 
         <TextView
             android:id="@+id/text_view_nomemusica"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/image_view"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/image_view"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
             android:textColor="@color/AmareloBege"
             android:textSize="20sp"/>
 
@@ -43,34 +43,37 @@
             android:id="@+id/text_view_album"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/image_view"
+            android:layout_toEndOf="@id/image_view"
             android:layout_below="@id/text_view_nomemusica"
             android:textColor="#FFFF"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:textSize="16sp"
             />
+
         <TextView
             android:id="@+id/text_view_ano"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/text_view_album"
             android:layout_below="@id/text_view_nomemusica"
+            android:layout_toEndOf="@id/text_view_album"
             android:textColor="#FFFF"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="2dp"
             android:textSize="16sp"
             />
 
         <TextView
             android:id="@+id/text_view_duracao"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/image_view"
+            android:textColor="@color/AzulEscuroMaisClaroAinda"
             android:layout_below="@id/text_view_ano"
-            android:textColor="#FFFF"
-            android:layout_marginLeft="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
             android:textSize="16sp"
             android:layout_marginBottom="3dp"
             />
+
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
 </LinearLayout>

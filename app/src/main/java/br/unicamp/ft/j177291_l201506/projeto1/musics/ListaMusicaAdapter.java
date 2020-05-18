@@ -101,7 +101,7 @@ class ListaMusicaAdapter extends RecyclerView.Adapter {
             textViewNomeMusica.setText(musica.getNomeMusica());
             textViewAlbum.setText(musica.getNomeAlbum());
             textViewDuracao.setText(musica.getDuracao());
-            textViewAno.setText(String.format(Locale.ENGLISH, "%d", musica.getAno()));
+            textViewAno.setText(String.format(Locale.ENGLISH, "(%d)", musica.getAno()));
         }
     }
 }

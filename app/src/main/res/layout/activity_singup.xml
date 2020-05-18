@@ -32,8 +32,10 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:text="@string/title_cadastro"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/AmareloClaro" />
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,7 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_user"
-                    android:textColorHint="@color/AzulEscuro"/>
+                    android:textColorHint="@color/AzulEscuroMaisClaro"/>
 
                 <!--  Email  -->
                 <TextView
@@ -75,7 +77,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_email"
-                    android:textColorHint="@color/AzulEscuro"/>
+                    android:textColorHint="@color/AzulEscuroMaisClaro"/>
 
                 <!--  Pass  -->
                 <TextView
@@ -88,8 +90,9 @@
                     android:id="@+id/edt_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textPassword"
                     android:hint="@string/hint_pass"
-                    android:textColorHint="@color/AzulEscuro"/>
+                    android:textColorHint="@color/AzulEscuroMaisClaro"/>
 
                 <!--  Confirm Pass  -->
                 <TextView
@@ -102,8 +105,9 @@
                     android:id="@+id/edt_confirm_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textPassword"
                     android:hint="@string/hint_confirm_pass"
-                    android:textColorHint="@color/AzulEscuro"/>
+                    android:textColorHint="@color/AzulEscuroMaisClaro"/>
 
                 <!--  Sexo  -->
                 <TextView
@@ -116,18 +120,22 @@
                 <RadioGroup
                     android:id="@+id/rb_group_sex"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+
+                    >
                     <RadioButton
                         android:id="@+id/rb_fem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/text_rb_fem"
+                        android:buttonTint="@color/AmareloBege"
                         android:textColor="@color/AzulEscuroMaisClaro"/>
                     <RadioButton
                         android:id="@+id/rb_masc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/text_rb_masc"
+                        android:buttonTint="@color/AmareloBege"
                         android:textColor="@color/AzulEscuroMaisClaro"/>
                     <RadioButton
                         android:id="@+id/rb_undefined"
@@ -135,6 +143,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/text_rb_undefined"
                         android:checked="true"
+                        android:buttonTint="@color/AmareloBege"
                         android:textColor="@color/AzulEscuroMaisClaro"/>
                 </RadioGroup>
 
@@ -260,7 +269,7 @@
                     android:onClick="onClickCadastrarUsuario"
                     android:text="@string/text_btn_cadastro"
                     android:textColor="#FFFFFF"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="20dp"/>
             </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
