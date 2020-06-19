@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "994679278414",
+    "firebase_url": "https://anavitora-e0373.firebaseio.com",
+    "project_id": "anavitora-e0373",
+    "storage_bucket": "anavitora-e0373.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994679278414:android:9928e02937ed9f40ee2c1f",
+        "android_client_info": {
+          "package_name": "br.unicamp.ft.j177291_l201506.projeto1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994679278414-p25a2urtkterah257aej3a1sm5hn513p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKKeM4oMNEB17sFzm57RrJReF6tai2m1s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994679278414-p25a2urtkterah257aej3a1sm5hn513p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
