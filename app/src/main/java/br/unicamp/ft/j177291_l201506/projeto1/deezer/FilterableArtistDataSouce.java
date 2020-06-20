@@ -1,11 +1,10 @@
-package br.unicamp.ft.j177291_l201506.projeto1.model;
+package br.unicamp.ft.j177291_l201506.projeto1.deezer;
 
 import android.content.Context;
 import android.widget.Filter;
 import android.widget.Filterable;
 
 import com.deezer.sdk.model.Artist;
-import br.unicamp.ft.j177291_l201506.projeto1.model.ApiRequestFactory;
 
 import java.util.ArrayList;
 

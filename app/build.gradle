@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -25,7 +26,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.1.0'
@@ -38,4 +38,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    compile project(':deezer-sdk-0.11.2')
 }

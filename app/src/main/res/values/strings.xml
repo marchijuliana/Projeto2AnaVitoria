@@ -85,6 +85,7 @@
     <string name="text_credit">- Outrória (Anavitória, OutroEu)</string>
     <string name="cadastrar">Ainda não é registrado? Cadastre-se!</string>
     <string name="txt_user">Usuário:</string>
+    <string name="title_profile">Perfil de usuario</string>
 
     <string-array name="fav_options">
         <item>Ana Clara</item>

@@ -15,6 +15,12 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class SingupActivity extends AppCompatActivity {
 
     private EditText edt_user, edt_pass, edt_confirm_pass, edt_email;
@@ -23,6 +29,9 @@ public class SingupActivity extends AppCompatActivity {
     private CheckBox cb_album, cb_dvd, cb_poster, cb_camiseta, cb_moletom, cb_colar, cb_pulseira,
             cb_agenda, cb_outros;
     private Button btn_cadastrar;
+
+    FirebaseAuth auth;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,35 +54,55 @@ public class SingupActivity extends AppCompatActivity {
         cb_agenda = findViewById(R.id.cb_agenda);
         cb_outros = findViewById(R.id.cb_outros);
         btn_cadastrar = findViewById(R.id.btn_cadastrar);
-    }
+    
+        auth = FirebaseAuth.getInstance();
 
-    public void onClickCadastrarUsuario(View view) {
-        if (edt_user.getText().toString().equals("")){
-            Toast.makeText(this, "Por favor, preencha o nome de usuário!", Toast.LENGTH_SHORT).show();
-        }
-        else if (edt_email.getText().toString().equals("")){
-            Toast.makeText(this, "Por favor, preencha o email!", Toast.LENGTH_SHORT).show();
-        }
-        else if (edt_pass.getText().toString().equals("")){
-            Toast.makeText(this, "Por favor, preencha a senha!", Toast.LENGTH_SHORT).show();
-        }
-        else if (edt_confirm_pass.getText().toString().equals("")){
-            Toast.makeText(this, "Por favor, confirme a senha!", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            if (edt_pass.getText().toString().equals(edt_confirm_pass.getText().toString())){
+        btn_cadastrar.setOnClickListener(new View.setOnClickListener() {
+            @Override
+            public void onClick(View view){
+
+            String txt_user = edt_user.getText().toString();
+            String txt_email = edt_email.getText().toString();
+            String txt_pass = edt_pass.getText().toString();
+            String txt_rb_group_sex = rb_group_sex.getText().toString();
+            String txt_spnn_fav = spnn_fav.getText().toString();
+            String txt_cd_album = cd_album.getText().toString();
+            String txt_cd_dvd = cd_dvd.getText().toString();
+            String txt_cd_poster =  cd_poster.getText().toString();
+            String txt_cd_camiseta = cd_camiseta.getText().toString();
+            String txt_cd_moletom = cd_moletom.getText().toString();
+            String txt_cd_colar = cd_colar.getText().toString();
+            String txt_cd_pulseira = cd_pulseira.getText().toString();
+            String txt_cd_agenda = cd_agenda.getText().toString();
+            String txt_cd_outros = cd_outros.getText().toString();
+
+
+            if (edt_user.getText().toString().equals("")){
+                Toast.makeText(this, "Por favor, preencha o nome de usuário!", Toast.LENGTH_SHORT).show();
+            }
+            else if (edt_email.getText().toString().equals("")){
+                Toast.makeText(this, "Por favor, preencha o email!", Toast.LENGTH_SHORT).show();
+            }
+            else if (edt_pass.getText().toString().equals("")){
+                Toast.makeText(this, "Por favor, preencha a senha!", Toast.LENGTH_SHORT).show();
+            }
+            else if (edt_confirm_pass.getText().toString().equals("")){
+                Toast.makeText(this, "Por favor, confirme a senha!", Toast.LENGTH_SHORT).show();
+            }
+            else{
+                 if (edt_pass.getText().toString().equals(edt_confirm_pass.getText().toString())){
 
                 String goodies = verificarGoodies();
                 String genero = verificarGenero();
 
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.putExtra("user", edt_user.getText().toString());
-                startActivity(intent);
+                cadastrar
             }
             else{
                 Toast.makeText(this, "As senhas não coincidem!", Toast.LENGTH_SHORT).show();
             }
-        }
+                }
+        });
+
     }
 
     private String verificarGoodies(){
@@ -121,4 +150,41 @@ public class SingupActivity extends AppCompatActivity {
 
         return genero;
     }
+
+    private void cadastrar (String edt_user, String edt_email, String edt_pass, String rb_group_sex, String spnn_fav, String cb_album, String cb_dvd, String cb_poster, String cb_camiseta, String cb_moletom, String cb_colar, String cb_pulseira, String cb_agenda, String cb_outros)
+    {
+        auth.createUserWithEmailAndPassword(edt_email, edt_pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task){
+                if (task.isSucessful())
+                {
+                    FirebaseUser firebaseUser = auth.getCurrentUser();
+                    String userid = firebaseUser.getUid();
+
+                    reference = FirebaseDatabase.getInstance().getReference(S: "Users").child(userid);
+
+                    HashMap<String, String> hashMap = new HashMap<>();
+                    hashMap.put("id", userid);
+                    hashMap.put("username", edt_user);
+                    hashMap.put("imageURL", "default");
+                
+                    reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>(){
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task){
+                            if(task.isSucessful()){
+                                Intent intent = new Intent(SingupActivity.this, MainActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                                startActivity(intent);
+                                finish();
+                            }
+                        }
+                    });
+                } else{
+                    Toast.makeText(context: SingupActivity.this, text:" Não foi possível concluir o cadastro", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
 }

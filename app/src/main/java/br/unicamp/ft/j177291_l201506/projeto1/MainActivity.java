@@ -28,10 +28,15 @@ public class MainActivity extends AppCompatActivity {
     public static int mainId = -1;
     private AppBarConfiguration mAppBarConfiguration;
 
+    FirebaseUser firebaseuser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         fab = findViewById(R.id.fab);
