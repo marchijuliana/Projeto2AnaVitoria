@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".quiz.QuizFragment"
+    android:orientation="vertical"
+    android:background="@color/AzulEscuro">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        card_view:cardCornerRadius="12dp"
+        card_view:cardElevation="3dp"
+        card_view:contentPadding="10dp"
+        android:backgroundTint="@color/AmareloMaisClaroAinda">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="@string/txt_quiz"
+                android:textSize="36sp"
+                android:textColor="@color/AzulEscuro"/>
+
+
+            <LinearLayout
+                android:id="@+id/banner_init_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/txt_quiz"
+                android:gravity="center">
+
+                <ImageView
+
+                    android:layout_width="350dp"
+                    android:layout_height="206dp"
+                    android:padding="3dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@color/AmareloBege"
+                    android:contentDescription="@string/anavitoria_banner"
+                    android:src="@drawable/anavit" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/banner_init_quiz"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="51dp"
+                android:gravity="center"
+                android:text="@string/txt_desc_quiz"
+                android:textSize="15sp"
+                android:textColor="@color/AzulEscuro"/>
+
+            <Button
+                android:id="@+id/btn_iniciar_quiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="#00FFFFFF"
+                android:paddingHorizontal="5dp"
+                android:stateListAnimator="@null"
+                android:text="@string/iniciar_quiz"
+                android:textColor="@color/AzulEscuro"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
