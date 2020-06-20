@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">994679278414-p25a2urtkterah257aej3a1sm5hn513p.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://anavitora-e0373.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">994679278414</string>
+    <string name="google_api_key" translatable="false">AIzaSyCKKeM4oMNEB17sFzm57RrJReF6tai2m1s</string>
+    <string name="google_app_id" translatable="false">1:994679278414:android:9928e02937ed9f40ee2c1f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCKKeM4oMNEB17sFzm57RrJReF6tai2m1s</string>
+    <string name="google_storage_bucket" translatable="false">anavitora-e0373.appspot.com</string>
+    <string name="project_id" translatable="false">anavitora-e0373</string>
+</resources>
